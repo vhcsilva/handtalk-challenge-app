@@ -9,3 +9,15 @@ export enum EThemeType {
 export interface IGlobalAttributes {
   themeHTChallenge: EThemeType | 'light'
 }
+
+export type VideoType = {
+  id: string,
+  url: string,
+  name: string,
+  frames: Array<string>
+}
+
+export type CutArea = {
+  begin: number,
+  end: number
+}

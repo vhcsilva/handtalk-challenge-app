@@ -19,7 +19,15 @@ const initialTheme = createTheme({
     secondary: {
       main: grey['800'],
     },
-
+    error:{
+      main: '#f44336' 
+    },
+    info:{
+      main: '#2196f3'
+    },
+    success: {
+      main: '#4caf50'
+    },
     tonalOffset: 0,
   },
 })
@@ -56,6 +64,15 @@ const AppWrapper: React.FC<IAppPreloaderProps> = ({ children }) => {
           main: grey['900'],
           light: grey['700'],
           dark: grey['900'],
+        },
+        error:{
+          main: '#f44336' 
+        },
+        info:{
+          main: '#2196f3'
+        },
+        success: {
+          main: '#4caf50'
         },
         background: {
           default: _theme === 'light' ? grey['300'] : '#303030'

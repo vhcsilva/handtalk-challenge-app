@@ -1,7 +1,11 @@
-import { Grid } from '@material-ui/core'
 import React from 'react'
+import { Grid } from '@material-ui/core'
+import { useLocation } from 'wouter'
+
 import CardModule from '../../components/CardModule'
 import Layout from '../../components/Layout'
+import { routes } from '../../routes'
+
 import { useStyles } from './styles'
 import imgCutVideo from '../../images/imgCutVideo.png'
 import imgShowCutedVideo from '../../images/imgShowCutedVideo.png'
@@ -12,13 +16,14 @@ interface IHomeProps {
 
 const Home: React.FC<IHomeProps> = () => {
   const classes = useStyles()
+  const [location, setLocation] = useLocation()
 
   const handleClickGoToCutVideo = () => {
-    alert('Redirecionar. . .')
+    setLocation(routes.upload)
   }
 
   const handleClickGoToShowCutedVideo = () => {
-    alert('Redirecionar. . .')
+    setLocation(routes.videos)
   }
 
   return (

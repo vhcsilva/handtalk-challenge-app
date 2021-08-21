@@ -1,3 +1,6 @@
 export const routes = {
-  home: '/'
+  home: '/',
+  upload: '/upload',
+  viewCuts: '/view/:id',
+  videos: '/view'
 }

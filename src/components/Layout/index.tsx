@@ -3,15 +3,17 @@ import AppBar from '../AppBar'
 import React from 'react'
 
 interface ILayoutProps {
-  children: JSX.Element
+  children: JSX.Element,
+  title?: string
 }
 
 const Layout: React.FC<ILayoutProps> = ({
   children,
+  title
 }) => {
   return (
     <Grid item xs container direction="column" style={{ height: '100%' }}>
-      <AppBar title="HT-Challenge" />
+      <AppBar title={title || 'HT Challenge'} />
       <Grid
         style={{
           position: 'relative',
